@@ -3,6 +3,7 @@ const helmet = require("helmet");
 const server = express();
 
 const projectRouter = require("./routers/projectRouter");
+const actionRouter = require("./routers/actionRouter");
 
 server.use(express.json());
 server.use(logger);
@@ -13,6 +14,7 @@ server.get("/", (req, res) => {
 });
 
 server.use("/api/projects", projectRouter);
+server.use("/api/actions", actionRouter);
 
 function logger(req, res, next) {
   console.log(req.method);
