@@ -1,20 +1,24 @@
-const express = require('express');
-const helmet = require('helmet');
+const express = require("express");
+const helmet = require("helmet");
 const server = express();
 
+const projectRouter = require("./routers/projectRouter");
+
 server.use(express.json());
-server.use(logger)
+server.use(logger);
 server.use(helmet());
 
 server.get("/", (req, res) => {
-    res.send(`Node-API-Challenge: Zoe Stokes`);
-  });
+  res.send(`Node-API-Challenge: Zoe Stokes`);
+});
 
-  function logger(req, res, next) {
-    console.log(req.method);
-    console.log(req.url);
-    console.log(Date.now());
-    next();
-  }
+server.use("/api/projects", projectRouter);
 
-  module.exports = server;
+function logger(req, res, next) {
+  console.log(req.method);
+  console.log(req.url);
+  console.log(Date.now());
+  next();
+}
+
+module.exports = server;
