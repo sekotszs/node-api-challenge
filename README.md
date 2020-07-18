@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is a framework that helps with CRUD operations. It makes builiding these apps so much easier. It helps code be secure and fast!
+
 - [ ] Describe Middleware?
+
+Middleware helps keep your code clean and short by using callback functions. It is invoked before the rest of the function.
 
 - [ ] Describe a Resource?
 
+A resource is a system that keeps our code, specifically our API organized and easy to navigate.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+Statuses. There are loads of them that can be specific when a request is sent depending on what that request does. There is 500(Server-side error) or 200(A success message!)
+
 - [ ] How can we partition our application into sub-applications?
+
+Routes can do that. They keep the code easy to navigate and makes it like a map that is easy to follow!
 
 ## Minimum Viable Product
 
